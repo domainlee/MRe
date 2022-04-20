@@ -119,10 +119,31 @@ a:hover {
 .header__navigation li {
     padding: 0 15px;
     list-style: none;
+    .header__navigation li a {
+        text-transform: uppercase;
+        font-size: 14px;
+    }
 }
-.header__navigation li a {
-    text-transform: uppercase;
-    font-size: 14px;
+
+.my-resume__skill--item {
+    margin: 0 0 15px 0;
+    display: flex;
+    label {
+        width: 150px;
+    }
+    div {
+        span {
+            margin: 0 3px;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            border-radius: 50%;
+            border: 1px solid #000;
+            &.active {
+                background-color: #000;
+            }
+        }
+    }
 }
 
 .heading-default {

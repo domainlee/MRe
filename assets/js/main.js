@@ -83,6 +83,20 @@
         });
     }
 
+    var skill = function () {
+        var skill_item = $('.my-resume__skill--item');
+        skill_item.each(function (k, v) {
+            var count = $(this).find('div');
+            var span = count.find('span');
+            var precent = count.attr('data-precent');
+            span.each(function (kk, vv) {
+                if(kk < precent) {
+                    $(this).addClass('active');
+                }
+            });
+        });
+    }
+
     $(document).ready(function() {
         loading();
         nav();
@@ -91,5 +105,6 @@
         // masonry();
         searchDesktop();
         sidebarScroll();
+        skill();
     });
 }());

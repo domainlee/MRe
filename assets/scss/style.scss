@@ -116,12 +116,15 @@ a:hover {
     width: 160px;
     height: 160px;
 }
-.header__navigation li {
-    padding: 0 15px;
-    list-style: none;
-    .header__navigation li a {
-        text-transform: uppercase;
-        font-size: 14px;
+
+.header__navigation {
+    li {
+        padding: 0 15px;
+        list-style: none;
+        a {
+            text-transform: uppercase;
+            font-size: 14px;
+        }
     }
 }
 
@@ -129,7 +132,18 @@ a:hover {
     margin: 0 0 15px 0;
     display: flex;
     label {
-        width: 150px;
+        width: 200px;
+        display: inline-flex;
+        align-items: center;
+        &:after {
+            content: '';
+            display: inline-flex;
+            width: auto;
+            height: 1px;
+            background-color: #000;
+            flex: 1;
+            margin: 0 10px 0 15px;
+        }
     }
     div {
         span {
@@ -153,6 +167,33 @@ a:hover {
     letter-spacing: 1px;
     font-size: 54px;
     font-weight: 400;
+}
+
+.project__list {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    .product__item {
+        padding: 15px;
+        width: 50%;
+        figure {
+            position: relative;
+            filter: grayscale(100%);
+            .product__content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: #00000042;
+                color: #FFF;
+            }
+        }
+    }
 }
 
 

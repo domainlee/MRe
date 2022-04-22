@@ -4,6 +4,7 @@
         $(window).on("load", function () {
             $('.loading').delay(666).fadeOut('slow');
             $('body').delay(666);
+            animation();
         });
     }
 
@@ -119,6 +120,26 @@
         }
     }
 
+    var animation = function () {
+        let animContainer = document.querySelectorAll('.to-top');
+        for (let element of animContainer) {
+            if (isInViewport(element)) {
+                setInterval(function(){
+                    element.classList.add('is-on');
+                }, 200);
+            }
+        }
+        function isInViewport(el) {
+            let inSight = el.getBoundingClientRect();
+            let windowHeight = window.innerHeight;
+
+            let topVisible = inSight.top > 0 && inSight.top < windowHeight;
+            let bottomVisible = inSight.bottom < windowHeight && inSight.bottom > 0;
+            let bothVisible = inSight.top < 0 && inSight.bottom > windowHeight;
+            return topVisible || bottomVisible || bothVisible;
+        }
+    }
+
     $(document).ready(function() {
         loading();
         nav();
@@ -129,5 +150,8 @@
         sidebarScroll();
         skill();
         sticky();
+        $(document).on( 'scroll', function(){
+            animation();
+        });
     });
 }());

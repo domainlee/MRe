@@ -75,7 +75,7 @@ a:hover {
     left: 0;
     right: 0;
     background-color: #000;
-    z-index: 1000;
+    z-index: 1050;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,6 +196,15 @@ a:hover {
     }
 }
 
+.to-top {
+    transform: translateY(25px);
+    transition: all 1.5s ease;
+    opacity: 0;
+    &.is-on {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 /** 17. Custom OWL **/
 .owl-carousel .owl-item .owl-lazy {

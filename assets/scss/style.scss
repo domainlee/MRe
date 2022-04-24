@@ -13,7 +13,7 @@ Version: 1.0.0
 */
 
 /* 1. Theme default css */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;400&family=Raleway:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;400&family=Roboto+Mono:wght@300;400;500&display=swap');
 
 $color-text: #111;
 $color-bg: #e5e5e5;
@@ -21,41 +21,13 @@ $color-link: #000;
 $color-link-hover: #111;
 
 body {
-    font-weight: 400;
+    font-weight: 300;
     background-color: $color-bg;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 ::selection {
     background: #111;
     color: #fff;
-}
-.ratio169 {
-    aspect-ratio: 16 / 9;
-    margin: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.ratio32 {
-    aspect-ratio: 3 / 2;
-    margin: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.ratio43 {
-    aspect-ratio: 4 / 3;
-    margin: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.ratio11 {
-    aspect-ratio: 1 / 1;
-    margin: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 a {
     color: #000;
@@ -64,6 +36,9 @@ a {
 a:hover {
     color: #000;
     text-decoration: underline;
+}
+.bg-size-cover {
+    background-size: cover;
 }
 /* Theme default css end */
 
@@ -115,6 +90,7 @@ a:hover {
 .header_avatar {
     width: 160px;
     height: 160px;
+    background-size: cover;
 }
 
 .header__navigation {
@@ -128,38 +104,7 @@ a:hover {
     }
 }
 
-.my-resume__skill--item {
-    margin: 0 0 15px 0;
-    display: flex;
-    label {
-        width: 200px;
-        display: inline-flex;
-        align-items: center;
-        &:after {
-            content: '';
-            display: inline-flex;
-            width: auto;
-            height: 1px;
-            background-color: #000;
-            flex: 1;
-            margin: 0 10px 0 15px;
-        }
-    }
-    div {
-        span {
-            margin: 0 3px;
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            border-radius: 50%;
-            border: 1px solid #000;
-            &.active {
-                background-color: #000;
-            }
-        }
-    }
-}
-
+/**  **/
 .heading-default {
     margin: 0 0 30px;
     font-family: 'Noto Serif Display', serif;
@@ -168,34 +113,203 @@ a:hover {
     font-size: 54px;
     font-weight: 400;
 }
+.heading-default__small {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
 
-.project__list {
-    margin: 0 -15px;
-    display: flex;
-    flex-wrap: wrap;
-    .product__item {
-        padding: 15px;
-        width: 50%;
-        figure {
-            position: relative;
-            filter: grayscale(100%);
-            .product__content {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background-color: #00000042;
-                color: #FFF;
+/**  **/
+.my-resume {
+    .col-9 {
+        position: relative;
+        &:before {
+            content: '';
+
+            width: 20px;
+            height: 1px;
+            background-color: #000;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 25px;
+        }
+    }
+    .my-resume__skill--item {
+        margin: 0 0 15px 0;
+        display: flex;
+        label {
+            width: 200px;
+            display: inline-flex;
+            align-items: center;
+            &:after {
+                content: '';
+                display: inline-flex;
+                width: auto;
+                height: 1px;
+                background-color: #000;
+                flex: 1;
+                margin: 0 10px 0 15px;
+            }
+        }
+        div {
+            span {
+                margin: 0 3px;
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                border-radius: 50%;
+                border: 1px solid #000;
+                &.active {
+                    background-color: #000;
+                }
             }
         }
     }
 }
 
+/**  **/
+.education__list {
+    .education__item {
+        margin: 0 0 20px;
+        .education__date {
+            margin: 0 0 5px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .education__name {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+        .education__subname {
+            font-size: 16px;
+        }
+    }
+}
+
+/**  **/
+.experience__list {
+    .experience__item {
+        margin: 0 0 20px;
+        .experience__date {
+            margin: 0 0 5px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .experience__company {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+        .experience__position {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+        .experience__description {
+            font-size: 16px;
+        }
+    }
+}
+
+/**  **/
+.awards__list {
+    .awards__item {
+        margin: 0 0 20px;
+        .awards__date {
+            margin: 0 0 5px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .awards__name {
+            margin: 0 0 5px;
+            font-size: 16px;
+        }
+        .awards__description {
+            font-size: 16px;
+        }
+    }
+}
+
+/**  **/
+.my-project {
+    .my-project__nav {
+        li {
+            margin: 5px 0;
+            button {
+                padding: 0;
+                width: 100%;
+                display: flex;
+                flex: 1;
+                justify-content: space-between;
+                align-items: center;
+                border: none;
+                background: transparent;
+                font-weight: 300;
+                color: #111;
+                transition: all .2s linear;
+                &:after {
+                    content: "";
+                    display: inline-flex;
+                    width: auto;
+                    height: 1px;
+                    background-color: #000;
+                    flex: 1;
+                    margin: 0 0 0 15px;
+                }
+                &.active, &:hover  {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .tab-content {
+        .tab-pane {
+            &.fade {
+                transition: opacity .35s linear;
+            }
+        }
+    }
+    .project__list {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+        .product__item {
+            padding: 15px;
+            width: 50%;
+            figure {
+                position: relative;
+                background-size: cover;
+                filter: grayscale(100%);
+                .product__content {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #00000042;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+/**  **/
+.my-blog {
+    .my-blog__list {
+        .my-blog__item {
+            h3 {
+                font-size: 24px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+/**  **/
 .to-top {
     transform: translateY(25px);
     transition: all 1.5s ease;

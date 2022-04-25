@@ -49,7 +49,7 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000;
+    background-color: $color-bg;
     z-index: 1050;
     display: flex;
     align-items: center;
@@ -73,7 +73,7 @@ a:hover {
     span {
         display: inline-block;
         margin: 0 5px;
-        color: #fff;
+        color: $color-link;
         @for $i from 0 through 6 {
             &:nth-child(#{$i + 1}) {
                 filter: blur(0px);
@@ -279,6 +279,7 @@ a:hover {
                 position: relative;
                 background-size: cover;
                 filter: grayscale(100%);
+                transition: all 1s ease;
                 .product__content {
                     text-align: center;
                     display: flex;
@@ -291,6 +292,34 @@ a:hover {
                     right: 0;
                     background-color: #00000042;
                     color: #FFF;
+                    transform: scale(1);
+                    transition: all 1s ease;
+                    .product__name {
+                        font-family: "Noto Serif Display",serif;
+                    }
+                }
+                .product__view {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #FFF;
+                    transform: scale(0);
+                    transition: all 1s ease;
+                    a {
+                        color: #FFF;
+                    }
+                }
+            }
+            &:hover {
+                figure {
+                    filter: grayscale(0%);
+                }
+                .product__content {
+                    background-color: transparent;
+                    transform: scale(0);
+                }
+                .product__view {
+                    transform: scale(1);
                 }
             }
         }
@@ -302,9 +331,71 @@ a:hover {
     .my-blog__list {
         .my-blog__item {
             h3 {
+                font-family: "Noto Serif Display",serif;
                 font-size: 24px;
                 font-weight: 400;
             }
+            .entry {
+                .entry__category {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+/**  **/
+.contact {
+    .contact__social {
+        padding: 0;
+        display: flex;
+        li {
+            list-style: none;
+            a {
+                margin: 0 5px 0 0;
+                width: 32px;
+                height: 32px;
+                display: inline-flex;
+                border: 1px solid;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-size: 14px;
+                &:hover {
+                    text-decoration: none;
+                    color: #FFF;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    .contact__form {
+        .form__item {
+            margin: 0 0 30px;
+            label {
+                margin: 0 0 10px;
+                display: block;
+                font-weight: 400;
+            }
+            input, textarea {
+                padding: 10px 15px;
+                width: 100%;
+                border: 1px solid;
+                background-color: transparent;
+                &:focus {
+                    outline: none;
+                }
+            }
+            textarea {
+                height: 200px;
+            }
+        }
+        button {
+            padding: 10px 30px;
+            background-color: #000;
+            color: #FFF;
+            border: none;
+            text-transform: uppercase;
         }
     }
 }

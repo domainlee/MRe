@@ -17,6 +17,7 @@ Version: 1.0.0
 
 $color-text: #111;
 $color-bg: #e5e5e5;
+$color-white: #ffffff;
 $color-link: #000;
 $color-link-hover: #111;
 
@@ -87,19 +88,23 @@ a:hover {
     100% {filter: blur(4px);}
 }
 
-.header_avatar {
-    width: 160px;
-    height: 160px;
-    background-size: cover;
-}
+.header {
+    background-color: $color-white;
 
-.header__navigation {
-    li {
-        padding: 0 15px;
-        list-style: none;
-        a {
-            text-transform: uppercase;
-            font-size: 14px;
+    .header_avatar {
+        width: 160px;
+        height: 160px;
+        background-size: cover;
+    }
+
+    .header__navigation {
+        li {
+            padding: 0 15px;
+            list-style: none;
+            a {
+                text-transform: uppercase;
+                font-size: 14px;
+            }
         }
     }
 }
@@ -121,11 +126,10 @@ a:hover {
 
 /**  **/
 .my-resume {
-    .col-9 {
+    .col-md-9 {
         position: relative;
         &:before {
             content: '';
-
             width: 20px;
             height: 1px;
             background-color: #000;

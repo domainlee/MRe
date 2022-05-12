@@ -140,6 +140,10 @@
         }
     }
 
+    var scrollTo = function () {
+        return new bootstrap.ScrollSpy(document.body,{target:".icon-menu"});
+    }
+
     $(document).ready(function() {
         loading();
         nav();
@@ -150,6 +154,7 @@
         sidebarScroll();
         skill();
         sticky();
+        // scrollTo();
         $(document).on( 'scroll', function(){
             animation();
         });

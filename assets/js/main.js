@@ -145,6 +145,7 @@
     }
 
     $(document).ready(function() {
+        window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
         loading();
         nav();
         lazy();
@@ -154,7 +155,7 @@
         sidebarScroll();
         skill();
         sticky();
-        // scrollTo();
+        scrollTo();
         $(document).on( 'scroll', function(){
             animation();
         });

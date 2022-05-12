@@ -416,7 +416,7 @@ a:hover {
 /*** 16. Single Page ***/
 .single-post__title {
     margin: 0 0 10px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 48px;
 }
 .single-post__image figure {
@@ -479,56 +479,6 @@ a:hover {
 }
 .post_meta a {
     color: #111;
-}
-.single-post__content img {
-    max-width: 100%;
-}
-.single-post__content a {
-    color: #111;
-    font-weight: 600;
-    text-decoration: underline;
-}
-.single-post__content {
-    padding: 0 0 20px;
-}
-.single-post__content--two {
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-column-count: 2;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    text-align: justify;
-}
-.single-post__content:first-letter {
-    margin: 5px 18px 10px 0;
-    display: block;
-    float: left;
-    font-size: 5em;
-    font-weight: 700;
-    line-height: 1;
-}
-blockquote {
-    margin: 15px 0;
-    padding: 80px 30px 30px 30px;
-    position: relative;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    //-webkit-column-span: all;
-    //-moz-column-span: all;
-    //column-span: all;
-}
-blockquote:before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    width: 60px;
-    height: 45px;
-    display: block;
-    //background-image: url(../images/quote.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .single-post__component {
@@ -607,7 +557,7 @@ blockquote:before {
     justify-content: center;
 }
 .post-author__name {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
 }
 .post-author__name a {
@@ -635,7 +585,7 @@ blockquote:before {
     padding: 0;
     text-transform: uppercase;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
 }
 .related-post__headline:after {
@@ -658,7 +608,7 @@ blockquote:before {
 }
 .related-post__title {
     margin: 5px 0 0;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
 }
 .related-post__title a {
@@ -709,7 +659,7 @@ blockquote:before {
     letter-spacing: 2px;
 }
 .single-post__nav--title {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     margin: 5px 0 0;
 }
@@ -729,7 +679,7 @@ blockquote:before {
     padding: 0;
     text-transform: uppercase;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1px;
 }
 .single-comment-title:after {
@@ -765,7 +715,7 @@ blockquote:before {
     margin: 0 10px 0 0;
     font-size: 14px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
 }
 .comment-date {
     text-transform: uppercase;
@@ -843,6 +793,88 @@ blockquote:before {
     font-size: 18px;
     letter-spacing: 1px;
 }
+
+
+/*** 14. Typography ***/
+.editor-content {
+    margin: 0 0 15px;
+}
+.editor-content img {
+    max-width: 100%;
+    display: block;
+}
+.editor-content figure {
+    display: flex;
+    flex-direction: column;
+}
+.editor-content figure img {
+    max-width: 100%;
+}
+.editor-content figure figcaption {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    border-bottom: 1px solid;
+}
+.editor-content figure.aligncenter {
+    justify-content: center;
+    align-items: center;
+}
+.editor-content figure.alignleft {
+    justify-content: start;
+    align-items: flex-start;
+}
+.editor-content figure.alignright {
+    justify-content: end;
+    align-items: flex-end;
+}
+.editor-content a {
+    color: #111;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.editor-content__col-two {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    text-align: justify;
+}
+.editor-content__dropcap:first-letter {
+    margin: 5px 18px 10px 0;
+    display: block;
+    float: left;
+    font-size: 5em;
+    font-weight: 500;
+    line-height: 1;
+    font-family: "Noto Serif Display",serif;
+}
+.editor-content blockquote {
+    margin: 15px 0;
+    padding: 80px 30px 30px 30px;
+    position: relative;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    //-webkit-column-span: all;
+    //-moz-column-span: all;
+    //column-span: all;
+}
+.editor-content blockquote:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 60px;
+    height: 45px;
+    display: block;
+    //background-image: url(../images/quote.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 .thank-you {
     img {

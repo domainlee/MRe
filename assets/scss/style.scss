@@ -101,16 +101,17 @@ a:hover {
         background-image: url('../images/mehrab-zahedbeigi-Wa3v4Fd8xBg-unsplash.jpg');
         background-size: cover;
     }
-
-    .header__navigation {
-        li {
-            padding: 0 15px;
-            list-style: none;
-            a {
-                padding: 0;
-                text-transform: uppercase;
-                font-size: 14px;
-                color: $color-link;
+    .header__menu {
+        .header__navigation {
+            li {
+                padding: 0 15px;
+                list-style: none;
+                a {
+                    padding: 0;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    color: $color-link;
+                }
             }
         }
     }
@@ -258,6 +259,7 @@ a:hover {
             padding: 15px;
             width: 50%;
             figure {
+                margin: 0;
                 position: relative;
                 background-size: cover;
                 filter: grayscale(100%);

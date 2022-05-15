@@ -141,7 +141,7 @@
     }
 
     var scrollTo = function () {
-        return new bootstrap.ScrollSpy(document.body,{target:".icon-menu"});
+        return new bootstrap.ScrollSpy(document.body,{target:".header__menu"});
     }
 
     $(document).ready(function() {

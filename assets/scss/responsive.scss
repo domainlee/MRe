@@ -20,16 +20,22 @@
             position: fixed;
             top: 0;
             bottom: 0;
-            left: 0;
+            left: -100%;
             right: 0;
             background-color: #FFF;
             z-index: 5;
             display: flex;
             align-items: center;
+            transition: all 0.3s ease;
             .header__navigation {
                 li {
                     padding: 10px 0;
                 }
+            }
+            .nav-open-js & {
+                opacity: 1;
+                visibility: visible;
+                left: 0;
             }
         }
     }
@@ -59,6 +65,60 @@
     .border-start {
         border: none !important;
     }
+
+    .header__menu-button-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        .fa-navicon__custom {
+            position: relative;
+            height: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .fa-navicon__custom i {
+            height: 2px;
+            width: 20px;
+            display: block;
+            background-color: #000000;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        .fa-navicon__custom:before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            display: block;
+            background-color: #000000;
+            position: absolute;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            top: 9px;
+        }
+        .fa-navicon__custom:after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            display: block;
+            background-color: #000000;
+            position: absolute;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+        .fa-navicon__custom i {
+            opacity: 0;
+        }
+    }
+
 }
 
 @media (max-width:576px) {

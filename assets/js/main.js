@@ -9,38 +9,24 @@
     }
 
     var nav = function () {
-        var button_nav = $('.toggle-menu');
+        var button_nav = $('.header__button-menu');
         button_nav.click(function (e) {
             $('body').toggleClass('nav-open-js');
         });
 
-        var toggle_search = $('.toggle-search');
-        toggle_search.click(function (e) {
-            $('body').toggleClass('search-open-js');
+        var button_close = $('.header__menu-button-close');
+        button_close.click(function (e) {
+            $('body').removeClass('nav-open-js');
         });
 
-        $("html").click(function(e) {
-            if ($(e.target).closest('.search-mobile').length == 0)
-                $('body').removeClass('search-open-js');
-        });
-
-        $('.nav__mobile > ul > li a').each(function(){
-            var t = $(this);
-            var checkElement = t.next();
-            if(checkElement.is('ul')) {
-                t.after('<span class="more">+</span>');
-                t.next().click(function(e){
-                    e.preventDefault();
-                    if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-                        checkElement.slideUp('normal');
-                    }
-                    if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-                        checkElement.slideDown('normal');
-                    }
-                    $(this).toggleClass('active');
-                });
-            }
-
+        var header__navigation = $('.header__navigation');
+        header__navigation.each(function () {
+            var button = $(this).find('a');
+            button.click(function () {
+                setTimeout(function () {
+                    $('body').removeClass('nav-open-js');
+                },500);
+            });
         });
     }
 
@@ -149,12 +135,12 @@
         loading();
         nav();
         lazy();
-        owlCarousel();
+        // owlCarousel();
         // masonry();
-        searchDesktop();
-        sidebarScroll();
+        // searchDesktop();
+        // sidebarScroll();
         skill();
-        sticky();
+        // sticky();
         scrollTo();
         $(document).on( 'scroll', function(){
             animation();

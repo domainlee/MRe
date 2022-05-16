@@ -39,7 +39,7 @@
             timer = window.setTimeout(function() {
                 if(scrollTop >= 330) {
                     head.addClass('head__fix');
-                } else if(scrollTop <= 330) {
+                } else {
                     head.removeClass('head__fix');
                 }
             }, 100);

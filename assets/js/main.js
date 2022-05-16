@@ -9,7 +9,7 @@
     }
 
     var nav = function () {
-        var button_nav = $('.header__button-menu');
+        var button_nav = $('.header__menu-button');
         button_nav.click(function (e) {
             $('body').toggleClass('nav-open-js');
         });
@@ -25,8 +25,25 @@
             button.click(function () {
                 setTimeout(function () {
                     $('body').removeClass('nav-open-js');
-                },500);
+                },10);
             });
+        });
+
+        var timer;
+        $(window).scroll(function(event) {
+            var scrollTop = $('html').scrollTop();
+            var head = $('.header');
+            if(timer) {
+                window.clearTimeout(timer);
+            }
+            timer = window.setTimeout(function() {
+                if(scrollTop >= 330) {
+                    head.addClass('head__fix');
+                } else if(scrollTop <= 330) {
+                    head.removeClass('head__fix');
+                }
+            }, 100);
+
         });
     }
 

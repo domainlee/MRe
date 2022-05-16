@@ -11,7 +11,9 @@
 }
 
 @media (max-width: 768px) {
-
+    //.nav-open-js {
+    //    overflow: hidden;
+    //}
     .header {
         .header__menu {
             padding: 0 50px;
@@ -36,6 +38,15 @@
                 opacity: 1;
                 visibility: visible;
                 left: 0;
+            }
+        }
+        h1, p, img {
+            transition: all 0.3s ease;
+        }
+        &.head__fix {
+            .header__button-menu {
+                position: fixed;
+                z-index: 6;
             }
         }
     }
@@ -65,11 +76,43 @@
     .border-start {
         border: none !important;
     }
-
+    .header__menu-outer {
+        transition: all 0.2s ease;
+        .header__menu-button {
+            cursor: pointer;
+            width: 200px;
+            height: 30px;
+            display: inline-block;
+            background-image: url('../img/bg_menu.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #FFF;
+            text-transform: uppercase;
+            line-height: 28px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            background-size: 60% auto;
+            &:hover {
+                color: #FFF;
+                text-decoration: none;
+            }
+        }
+        .head__fix & {
+            padding: 5px 0;
+            position: fixed;
+            width: 100%;
+            background-color: #FFF;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+    }
     .header__menu-button-close {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 50px;
+        left: 50px;
+        cursor: pointer;
         .fa-navicon__custom {
             position: relative;
             height: 20px;

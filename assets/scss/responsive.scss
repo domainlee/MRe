@@ -11,10 +11,15 @@
 }
 
 @media (max-width: 768px) {
-    //.nav-open-js {
-    //    overflow: hidden;
-    //}
     .header {
+        .header__logo {
+            height: 65px;
+        }
+        .header_avatar {
+            margin: -35px auto 15px;
+            width: 80px;
+            height: 80px;
+        }
         .header__menu {
             padding: 0 50px;
             opacity: 0;

@@ -43,7 +43,6 @@
                     head.removeClass('head__fix');
                 }
             }, 100);
-
         });
     }
 

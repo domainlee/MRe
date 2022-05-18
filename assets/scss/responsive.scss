@@ -1,16 +1,16 @@
-@media (max-width:1400px) {
-
-}
-
-@media (max-width:1200px) {
-
-}
-
-@media (max-width: 992px) {
-
-}
-
+@media (max-width:1400px) {}
+@media (max-width:1200px) {}
+@media (max-width: 992px) {}
 @media (max-width: 768px) {
+
+    .heading-default {
+        margin: 0 0 20px;
+        font-size: 48px;
+    }
+    .border-start {
+        border: none !important;
+    }
+
     .header {
         .header__logo {
             height: 65px;
@@ -74,15 +74,12 @@
         }
     }
 
-    .heading-default {
-        margin: 0 0 20px;
-        font-size: 48px;
-    }
-    .border-start {
-        border: none !important;
-    }
+
     .header__menu-outer {
-        transition: all 0.2s ease;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
         .header__menu-button {
             cursor: pointer;
             width: 200px;
@@ -166,10 +163,94 @@
             opacity: 0;
         }
     }
-
+    .single-post {
+        .single-post__title {
+            font-size: 32px;
+        }
+        .post-tags-inner {
+            margin: 0 0 15px;
+            display: block;
+        }
+        .single-post__component {
+            flex-wrap: wrap;
+        }
+        .single-post__nav {
+            .single-post__nav--title {
+                font-size: 20px;
+            }
+        }
+        .related-post  {
+            .related-post__list {
+                flex-wrap: wrap;
+                .related-post__item {
+                    margin: 0 0 15px;
+                    padding: 0 10px;
+                    width: 100%;
+                }
+            }
+        }
+        .post-author {
+            margin: 20px auto;
+            flex-wrap: wrap;
+            figure {
+                margin: 0 auto 15px;
+                a img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+            }
+            .post-author__info {
+                padding: 0;
+                .post-author__name {
+                    text-align: center;
+                }
+            }
+        }
+        .single-comment {
+            .commentlist {
+                > li {
+                    .comment-details {
+                        padding: 0;
+                        .reply {
+                            position: relative;
+                            top: 0;
+                            right: 0;
+                            border-left: none;
+                            padding: 0;
+                        }
+                    }
+                    .children {
+                        margin: 20px 0 0;
+                        padding: 15px 0 15px 15px;
+                        border-left: 1px solid;
+                    }
+                }
+            }
+        }
+    }
+    .editor-content {
+        &.editor-content__col-two {
+            columns: 1;
+            -webkit-columns: 1;
+            -moz-column-count: 1;
+            -webkit-column-gap: 0;
+            -moz-column-gap: 0;
+            column-gap: 0;
+            text-align: justify;
+        }
+    }
 }
 
 @media (max-width:576px) {
+
+    .heading-default {
+        margin: 0 0 15px;
+        font-size: 36px;
+    }
+    .border-start {
+        border: none !important;
+    }
 
     .my-resume {
         .col-md-9 {
@@ -210,13 +291,14 @@
         }
     }
 
-    .heading-default {
-        margin: 0 0 15px;
-        font-size: 36px;
+    .contact {
+        .contact__form {
+            .form__item {
+                margin: 0 0 15px;
+            }
+        }
     }
-    .border-start {
-        border: none !important;
-    }
+
     .thank-you {
         img {
             width: 150px;

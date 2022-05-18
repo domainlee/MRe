@@ -10,11 +10,7 @@ const CSS_DIR = ASSETS_DIR + '/scss';
 const config = {
     entry : [
         NODE_MODULES + '/owl.carousel/dist/owl.carousel.min.js',
-        // NODE_MODULES + '/bootstrap/dist/js/bootstrap.bundle.min.js',
         JS_DIR + '/modernizr-3.11.2.min.js',
-        JS_DIR + '/masonry.pkgd.min.js',
-        JS_DIR + '/theia-sticky-sidebar.min.js',
-        JS_DIR + '/resize-sensor.min.js',
         JS_DIR + '/jquery.lazy.min.js',
         JS_DIR + '/main.js',
         CSS_DIR + '/main.scss',

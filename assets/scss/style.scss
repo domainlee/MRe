@@ -9,15 +9,15 @@ Version: 1.0.0
 /* CSS Index
 -------------------------------------
 1. Theme default css
-2. Start Loading
-3. Start Header
-4. Start My Resume
-5. Start My Project
-6. Start My Blog
-7. Start Contact
-8. Start Single Page
-9. Start Typography
-10. Start Custom Style
+2. Loading
+3. Header
+4. My Resume
+5. My Project
+6. My Blog
+7. Contact
+8. Single Page
+9. Typography
+10. Custom Style
 -------------------------------------
 */
 
@@ -411,11 +411,13 @@ a:hover {
                 padding: 10px 15px;
                 width: 100%;
                 border: 1px solid;
-                background-color: transparent;
+                background-color: #FFF;
                 border-radius: 0;
                 -webkit-appearance: none;
+                transition: all .3s ease;
                 &:focus {
                     outline: none;
+                    box-shadow: 2px 2px #111;
                 }
             }
             textarea {
@@ -427,6 +429,8 @@ a:hover {
             background-color: $color-link;
             color: #FFF;
             border: none;
+            border-radius: 0;
+            -webkit-appearance: none;
             text-transform: uppercase;
         }
     }
@@ -751,6 +755,8 @@ a:hover {
                 border: 1px solid #111;
                 width: 100%;
                 transition: all 0.3s ease;
+                border-radius: 0;
+                -webkit-appearance: none;
                 &:focus {
                     outline: none;
                     box-shadow: 2px 2px #111;
@@ -763,6 +769,8 @@ a:hover {
                 width: 100%;
                 border: 1px solid #111;
                 transition: all 0.3s ease;
+                border-radius: 0;
+                -webkit-appearance: none;
                 &:focus {
                     outline: none;
                     box-shadow: 2px 2px #111;
@@ -777,6 +785,8 @@ a:hover {
             text-transform: uppercase;
             font-size: 18px;
             letter-spacing: 1px;
+            border-radius: 0;
+            -webkit-appearance: none;
         }
     }
 
